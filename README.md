@@ -1,6 +1,6 @@
 # Acorn Stairlifts 
 
-As part of an interview process, I was tasked with designing a small web application that demonstrated some relevant skills for Acorn Stairlifts. The parameters for the project left a lot of freedom, and I was encouraged to be creative. I was given some sample marketing sites to consider too. 
+As part of an interview process, I was tasked with designing a small web application that demonstrated some relevant skills for Acorn Stairlifts. The parameters for the project allowed for a lot of freedom, and I was encouraged to be creative. I was given some sample marketing sites to consider too. 
 
 #### Objectives
 
