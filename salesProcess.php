@@ -34,7 +34,7 @@ echo "<b>$f</b> $ff <br>";
 echo "<b>$g</b> $gg <br>";
 echo "<b>$h</b> $hh <br>";
 
-echo "<br><br>If anything is incorrect, <a href='contact.php'>go back</a> and do it again. Otherwise, I will be forced to include this on your permanent record.";
+echo "<br><br>If anything is incorrect, <a href='sales.php'>go back</a> and do it again. Otherwise, I will be forced to include this on your permanent record.";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=acorn", $username, $password);
