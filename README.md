@@ -28,15 +28,15 @@ Before I could get started on the code, I needed to figure out how I was going t
 
 I decided to use Google Cloud Platform and create a virtual machine instance with a public IP address. 
 
-<img src="acorn_screenshots/gcp-vm.png" alt="image-20200819110944967" style="zoom:25%;" />
+<img src="acorn_screenshots/gcp-vm.png" alt="Google Cloud Platform VM Creation"  />
 
 I configured the virtual machine to be a micro instance with one vCPU and 614MB of memory. I used a minimal Ubuntu 16.04 LTS image for the operating system.
 
-![](acorn_screenshots/ssh.png)
+![ssh terminal](acorn_screenshots/ssh.png)
 
 Once the machine was created, I used SSH to further configure my new server. I setup Apache, MySQL, and PHP on the machine.
 
-![image-20200819112321687](acorn_screenshots/dns.png)With the host server configured, I went to my website's DNS page and created an `a record` to point the server's IP to an easy to remember URL.
+![dns settings](acorn_screenshots/dns.png)With the host server configured, I went to my website's DNS page and created an `a record` to point the server's IP to an easy to remember URL.
 
 
 
@@ -54,7 +54,7 @@ I created a basic layout with top navigation and a main content area. I initally
 Home would be my `index.php` and contain some basic product information. The remaining three pages would need to connect with the MySQL database. I created a db called acorn and three tables to correspond with the front end.
 
 ### Database population
-<img src="acorn_screenshots/phpmyadmin.png" alt="image-20200819113533898" />
+<img src="acorn_screenshots/phpmyadmin.png" alt="phpmyadmin" />
 
 After creating the tables and the database, I filled them with content I found on various Acorn marketing sites. I copied source code to perserve HTML formatting so that blog posts and other content were displayed accurately.
 
@@ -68,4 +68,5 @@ There was still some custom CSS necessary to give a more cohesive branding feel 
 Speaking of the logo, I actually made that logo myself using Adobe Illustrator. I wanted a scalable graphic and didn't have luck finding one on the web. 
 
 I used it for the nav, and used the same image to create the `favicon` for the browser tab.  
-<img src="acorn_screenshots/favicon.png" alt="image-20200819113533898" />
+<img src="acorn_screenshots/favicon.png" alt="favicon" />
+
