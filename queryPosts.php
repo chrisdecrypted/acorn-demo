@@ -9,7 +9,6 @@
 
       // Query
       $stmt = $conn->query("SELECT * FROM posts");
-      
       $posts = $stmt->fetchAll(PDO::FETCH_OBJ);
       // Map DB to HTML
       foreach ($posts as $post) {
