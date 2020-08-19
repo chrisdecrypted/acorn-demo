@@ -137,6 +137,12 @@ I spent a lot of time trying to come up with an efficient method for throwing cu
 
 In order to prevent against SQL injections, I needed to sanitize any user input that would allow code exceution. 
 
+I passed the filtered `$_POST` data to new variables for use in the database.
+
+```PHP
+$newVariableName =sanitize($_POST['variableName']);
+```
+
 I used the following function to do this:
 ```PHP
 function sanitize($data) {
@@ -146,3 +152,28 @@ function sanitize($data) {
     return $data;
   }
   ```
+
+Beyond essential character escaping, I wanted the code to parse the input data and catch obvious user errors. I struggled to find a solution that did exactly what I wanted without creating a waterfall of conditional statements.
+
+I ultimately settled due to time constraints. Late into my research I found the php `list()` function. This allowed me to create a list structure so I could pair the element and a description of the element. 
+
+```PHP
+$dataName = array('First Name: ','Last Name: ','Street Address: ','City: ','State: ','Zip: ','E-Mail: ','Number of Stairs: ');
+list ($a,$b,$c,$d,$e,$f,$g,$h)= $dataName;
+$responses = array($fname, $lname ,$street, $city, $state, $zip, $email, $stairs);
+list ($aa, $bb ,$cc, $dd, $ee, $ff, $gg, $hh) = $responses;
+echo "<b>$a</b> $aa <br>";
+echo "<b>$b</b> $bb <br>";
+echo "<b>$c</b> $cc <br>";
+echo "<b>$d</b> $dd <br>";
+echo "<b>$e</b> $ee <br>";
+echo "<b>$f</b> $ff <br>";
+echo "<b>$g</b> $gg <br>";
+echo "<b>$h</b> $hh <br>";
+```
+
+This ran through each of the form inputs and returned them to the user for self-verification. This would be a bad idea in production because it would allow a lot of bad data or null values to be passed. 
+
+
+Here is an example of a succesful form submission / database update.
+<img src="acorn_screenshots/input.png" alt="input validation" />
